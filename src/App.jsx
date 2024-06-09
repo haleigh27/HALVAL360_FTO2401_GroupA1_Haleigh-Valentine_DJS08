@@ -1,22 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Vans from './pages/Vans/Vans.jsx';
-import VanDetail from './pages/Vans/VanDetail.jsx';
-import Dashboard from './pages/Host/Dashboard.jsx';
-import Income from './pages/Host/Income.jsx';
-import Reviews from './pages/Host/Reviews.jsx';
-import HostVans from './pages/Host/HostVans.jsx';
-import HostVanDetail from './pages/Host/HostVanDetail.jsx';
-import HostVanInfo from './pages/Host/HostVanInfo.jsx';
-import HostVanPricing from './pages/Host/HostVanPricing.jsx';
-import HostVanPhotos from './pages/Host/HostVanPhoto.jsx';
-import NotFound from './pages/NotFound.jsx';
-import Login from './pages/Login.jsx';
+// Components
 import Layout from './components/Layout.jsx';
 import HostLayout from './components/HostLayout.jsx';
 import AuthRequired from './components/AuthRequired.jsx';
-
+// Pages
+import About from './pages/About';
+import Home from './pages/Home';
+import Login from './pages/Login.jsx';
+import NotFound from './pages/NotFound.jsx';
+// Pages > Host
+import Dashboard from './pages/Host/Dashboard.jsx';
+import HostVanDetail from './pages/Host/HostVanDetail.jsx';
+import HostVanInfo from './pages/Host/HostVanInfo.jsx';
+import HostVanPhotos from './pages/Host/HostVanPhoto.jsx';
+import HostVanPricing from './pages/Host/HostVanPricing.jsx';
+import HostVans from './pages/Host/HostVans.jsx';
+import Income from './pages/Host/Income.jsx';
+import Reviews from './pages/Host/Reviews.jsx';
+// Pages > Vans
+import Vans from './pages/Vans/Vans.jsx';
+import VanDetail from './pages/Vans/VanDetail.jsx';
+// Database
 import './server.jsx';
 
 export default function App() {
@@ -43,7 +47,7 @@ export default function App() {
 							</Route>
 						</Route>
 					</Route>
-
+					{/* catch-all route */}
 					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>
